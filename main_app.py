@@ -12,6 +12,6 @@ with st.container():
 with st.container():
     st.subheader("2. Quora Question Duplicate Detector")
     st.write("An app to detect duplicate questions on Quora.")
-    st.markdown("[Go to Quora Duplicate Detector](https://quora-duplicated-qsa-detector.streamlit.app/)", unsafe_allow_html=True)
+    st.markdown("[Go to Quora Duplicate Detector](https://quora-duplicated-qsa-detector1.streamlit.app/)", unsafe_allow_html=True)
 
 # Add more projects here
