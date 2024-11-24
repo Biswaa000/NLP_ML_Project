@@ -2,12 +2,9 @@ import streamlit as st
 import pickle
 import string
 import nltk
+import os
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
-
-# import nltk
-# nltk.download('punkt')
-# nltk.download('punkt_tab')
 
 # Ensure required NLTK resources are available
 nltk.download('punkt')
@@ -30,10 +27,13 @@ def transform_text(text):
     # Join back into a single string
     return " ".join(text)
 
+# Get the current directory (the folder where the main app resides)
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
 # Load the saved TF-IDF vectorizer and trained model
 try:
-    tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
-    model = pickle.load(open('model.pkl', 'rb'))
+    tfidf = pickle.load(open(f'{current_dir}/vectorizer.pkl', 'rb'))
+    model = pickle.load(open(f'{current_dir}/model.pkl', 'rb'))
 except FileNotFoundError:
     st.error("Required files (`vectorizer.pkl` or `model.pkl`) are missing. Please add them to the working directory.")
     st.stop()
