@@ -7,7 +7,7 @@ st.header('---All NLP ML PROJECTS---')
 with st.container():
     st.subheader("1. SMS Spam Detector")
     st.write("An app to detect whether an SMS is spam or not.")
-    st.markdown("[Go to SMS Spam Detector](https://smsemail-spam-detector.streamlit.app/)", unsafe_allow_html=True)
+    st.markdown("[Go to SMS Spam Detector](https://sms-mail-spam-detector.streamlit.app/)", unsafe_allow_html=True)
 
 with st.container():
     st.subheader("2. Quora Question Duplicate Detector")
